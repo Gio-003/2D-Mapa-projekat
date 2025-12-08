@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{956cefee-5f34-4187-8be6-242ea59c04ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Create.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Create.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Create.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\..\..\OneDrive\Desktop\Racunarska grafika\RG_Kostur\RG_Kostur\Kostur\map.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Racunarska grafika\RG_Kostur\RG_Kostur\Kostur\map.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Racunarska grafika\RG_Kostur\RG_Kostur\Kostur\tex.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Racunarska grafika\RG_Kostur\RG_Kostur\Kostur\tex.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Racunarska grafika\RG_Kostur\RG_Kostur\Kostur\line.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\OneDrive\Desktop\Racunarska grafika\RG_Kostur\RG_Kostur\Kostur\line.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Shaders\line.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\line.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\map.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\map.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\tex.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\tex.vert">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\compas.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\compas1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\digits.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\dot.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\dot1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\lenjir.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\map.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\nesto.png.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\ping.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\walking.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
