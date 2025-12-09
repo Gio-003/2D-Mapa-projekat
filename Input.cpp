@@ -11,7 +11,7 @@ const double mapScaleFactor = 10000.0; // Faktor konverzije UV koordinata u "met
 
 // --- Globals ---
 float camX = 0.5f, camY = 0.5f; //kamera podesena na centar mape
-float camSpeed = 0.00012f;
+float camSpeed = 0.0015f;
 const float zoomVal = 0.1f; // Povecano zumiranje (manji broj = veci zoom) za "walking mode" (10/100 mape)
 int screenWidth = 800, screenHeight = 800;
 MeasurePoint mouseToXY(double mx, double my)
