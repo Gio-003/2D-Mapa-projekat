@@ -40,7 +40,7 @@ extern int screenHeight;
 
 
 // Funkcije vezane za interakciju sa misem i tastaturom
-void processInput(GLFWwindow* window);
+void processKeyboardInput(GLFWwindow* window);
 void processMouse(GLFWwindow* window);
 int findPointIndexNear(double mx, double my);
 void addMeasurePoints(MeasurePoint p);

@@ -24,9 +24,10 @@ MeasurePoint mouseToXY(double mx, double my)
     return p;
 }
 AppMode mode = MODE_WALKING;
-void processInput(GLFWwindow* window) {
+void processKeyboardInput(GLFWwindow* window) {
 
     static bool rWasPressed = false;
+    //if (key == GLFW_KEY_S && action == GLFW_PRESS) {
     if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
     {
         if (!rWasPressed) {
@@ -78,7 +79,7 @@ void processMouse(GLFWwindow* window) {
         float y = 1.0f - (float(my) / screenHeight) * 2.0f;
 
         // Klik na switch ikonicu
-        if (x > 0.70f && x < 0.97f && y > 0.70f && y < 0.97f) {
+        if (x > 0.80f && x < 0.97f && y > 0.80f && y < 0.97f) {
             mode = (mode == MODE_WALKING ? MODE_MEASURING : MODE_WALKING);
         }
         else {
@@ -153,3 +154,96 @@ void removeMeasurePoint(int index)
     }
     measurePoints.erase(measurePoints.begin() + index);
 }
+/*void mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
+{
+    static bool leftWasDown = false;
+
+    if (button == GLFW_MOUSE_BUTTON_LEFT)
+    {
+        if (action == GLFW_PRESS && !leftWasDown)
+        {
+            double mx, my;
+            glfwGetCursorPos(window, &mx, &my);
+
+            // Pretvaranje u NDC
+            float x = (float(mx) / screenWidth) * 2.0f - 1.0f;
+            float y = 1.0f - (float(my) / screenHeight) * 2.0f;
+
+            // Klik na ikonicu
+            if (x > 0.80f && x < 0.97f && y > 0.80f && y < 0.97f)
+            {
+                mode = (mode == MODE_WALKING ? MODE_MEASURING : MODE_WALKING);
+            }
+            else
+            {
+                if (mode == MODE_MEASURING)
+                {
+                    int idx = findPointIndexNear(mx, my);
+
+                    if (idx != -1)
+                        removeMeasurePoint(idx);
+                    else
+                        addMeasurePoints(mouseToXY(mx, my));
+                }
+            }
+        }
+
+        // update previous state
+        if (action == GLFW_PRESS) leftWasDown = true;
+        if (action == GLFW_RELEASE) leftWasDown = false;
+    }
+}
+*/
+/*void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    static bool rWasPressed = false;
+
+    // --- R toggle ---
+    if (key == GLFW_KEY_R)
+    {
+        if (action == GLFW_PRESS && !rWasPressed)
+        {
+            mode = (mode == MODE_WALKING ? MODE_MEASURING : MODE_WALKING);
+            rWasPressed = true;
+        }
+        else if (action == GLFW_RELEASE)
+        {
+            rWasPressed = false;
+        }
+        return;
+    }
+
+    // --- ESC zatvaranje ---
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+    {
+        glfwSetWindowShouldClose(window, true);
+        return;
+    }
+
+    // --- Kretanje (samo u WALKING modu) ---
+    if (mode == MODE_WALKING)
+    {
+        float oldX = camX;
+        float oldY = camY;
+
+        if (action == GLFW_PRESS || action == GLFW_REPEAT)
+        {
+            if (key == GLFW_KEY_W) camY += camSpeed;
+            if (key == GLFW_KEY_S) camY -= camSpeed;
+            if (key == GLFW_KEY_A) camX -= camSpeed;
+            if (key == GLFW_KEY_D) camX += camSpeed;
+        }
+
+        // Granice
+        float halfZoom = zoomVal * 0.5f;
+        camY = std::max(halfZoom, std::min(camY, 1.0f - halfZoom));
+        camX = std::max(halfZoom, std::min(camX, 1.0f - halfZoom));
+
+        // Distance
+        float dx = camX - oldX;
+        float dy = camY - oldY;
+        double segment = std::sqrt(dx * dx + dy * dy);
+        totalDistance += segment * mapScaleFactor;
+    }
+}
+*/

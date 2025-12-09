@@ -51,7 +51,7 @@ GLFWwindow* initWindow() {
 //Kada korisnik promeni veličinu prozora, parametri w i h su nove dimenzije
 void framebufferCallback(GLFWwindow* window, int w, int h) {
     screenWidth = w; screenHeight = h;
-    glViewport(0, 0, w, h);
+    glViewport(0, 0, w, h); 
 }
 //Za sve draw funkcije koje nisu drawDistanceNumber vratimo Scale i Offset na standardne vrednosti
 void resetUVProps() {
@@ -264,7 +264,7 @@ void drawInfoBox() {
 int main() {
     GLFWwindow* window = initWindow();
     if (!window) return endProgram("Window init failed.");
-    glfwSetFramebufferSizeCallback(window, framebufferCallback);
+    // glfwSetFramebufferSizeCallback(window, framebufferCallback);
 
     GLFWcursor* cursor = loadImageToCursor("Resources/compas1.png");
     if (cursor) glfwSetCursor(window, cursor);
@@ -301,14 +301,14 @@ int main() {
     loc_tex_uvOffset = glGetUniformLocation(texShader, "uUVOffset");
 
     // Inicijalizacija uniformi da ne bi bile 0
-    glUseProgram(texShader);
-    glUniform2f(loc_tex_uvScale, 1.0f, 1.0f);
-    glUniform2f(loc_tex_uvOffset, 0.0f, 0.0f);
+   // glUseProgram(texShader);
+   // glUniform2f(loc_tex_uvScale, 1.0f, 1.0f);
+  //  glUniform2f(loc_tex_uvOffset, 0.0f, 0.0f);
 
     while (!glfwWindowShouldClose(window)) {
         double frameStart = glfwGetTime();
 
-        processInput(window);
+        processKeyboardInput(window);
 
         glClearColor(0.12f, 0.14f, 0.17f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
